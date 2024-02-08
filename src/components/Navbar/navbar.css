@@ -1,0 +1,83 @@
+
+  .navbarContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+}
+
+.navbar {
+    line-height: 30px;
+  --s: 1.8em; /* the ribbon size */
+  --d: .8em;  /* the depth */
+  --c: .8em;  /* the cutout part */
+  
+  padding: 0 calc(var(--s) + .5em) var(--d);
+
+  background:
+    conic-gradient(at left  var(--s) bottom var(--d),
+     #0000 25%,#0008 0 37.5%,#0004 0) 0   /50% 100% no-repeat,
+    conic-gradient(at right var(--s) bottom var(--d),
+     #0004 62.5%,#0008 0 75%,#0000 0) 100%/50% 100% no-repeat;
+  clip-path: polygon(0 var(--d), var(--s) var(--d),var(--s) 0,calc(100% - var(--s)) 0,calc(100% - var(--s)) var(--d),100% var(--d),calc(100% - var(--c)) calc(50% + var(--d)/2),100% 100%,calc(100% - var(--s) - var(--d)) 100%,calc(100% - var(--s) - var(--d)) calc(100% - var(--d)),calc(var(--s) + var(--d)) calc(100% - var(--d)),calc(var(--s) + var(--d)) 100%,0 100%,var(--c) calc(50% + var(--d)/2));
+  background-color: #4E9F3D; /* the main color */
+  width: 500px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 60px;
+    list-style: none;
+    height: 45px;
+}
+
+.navbar li {
+    font-size: 25px;
+    margin: 0;
+    position: relative;
+}
+
+.navbar li:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #191A19;
+    transition: all 0.3s ease 0s;
+    width: 0;
+}
+
+.navbar li:hover:after {
+    width: 100%; 
+    left: 0;  
+}
+
+
+.navlink {
+    color: #ffffff;
+    transition: color linear 0.3s;
+    text-decoration: none;
+}
+
+.navlink:hover {
+    color: #191A19;
+}
+
+.activeNavLink {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 27px;
+}
+
+.activeNavLink:hover {
+    color: #191A19;
+    transition: color 0.3s ease 0s;
+}

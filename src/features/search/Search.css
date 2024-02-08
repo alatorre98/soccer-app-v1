@@ -1,0 +1,39 @@
+.search-container {
+    width: 100%;
+    margin-top: 130px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.search-box {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 1200px;
+    padding: 15px 0 50px;
+    border-radius: 20px;
+}
+
+.logo-container {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.league-container {
+    display: flex;
+    justify-content: center;
+}
+
+.club-container {
+    display: flex;
+    align-items: center;
+}
+
+.rank-separator {
+    width: 14px;
+    margin-right: 20px;
+}
+
+.team-logo-separator {
+    margin-right: 10px;
+}
